@@ -11,7 +11,7 @@ int main(void) {
     };
 
     printf("\nWelcome to ESCAPE THE TEXT DUNGEON.\n");
-    printf("-----------------------------------------\n");
+    printf("-----------------------------------------");
     bool running = true;
     while (running) {
         if (state.health <= 0) {

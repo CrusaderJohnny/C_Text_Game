@@ -22,7 +22,7 @@ int get_input(int max_choice) {
 
 
 void print_header(char *title) {
-    printf("\n\n=== %s ===\n", title);
+    printf("\n=== %s ===\n", title);
 }
 
 void handle_cell(gameState_t *state) {
@@ -47,12 +47,12 @@ void handle_cell(gameState_t *state) {
     } else if (choice == 2) {
         printf("\nYou approach the door...\n");
         if (state->has_key) {
-            printf("\nThe key fits in the keyhole, you turn the key and exit the cell\n");
+            printf("The key fits in the keyhole, you turn the key and exit the cell\n");
             state->location = ROOM_HALLWAY;
         } else {
-            printf("\nThe door is locked.\n");
+            printf("The door is locked.\n");
             if (!state->has_key) {
-                printf("\nIf only this room had a secret.\n");
+                printf("If only this room had a secret.\n");
             }
         }
     } else if (choice == 3) {
@@ -84,9 +84,9 @@ void handle_hallway(gameState_t *state) {
                 if (state->has_sword) {
                     printf("\nYou sneak up on the guard and attack with your sword!\n");
                     state->guard_alive = false;
-                    printf("The Orc Guard Lies Defeated!");
+                    printf("The Orc Guard Lies Defeated!\n");
                 } else {
-                    printf("You sneak up on the guard and try to punch him.\nHe simply laughs at you and strikes back\n");
+                    printf("\nYou sneak up on the guard and try to punch him.\nHe simply laughs at you and strikes back\n");
                     state->health -= 50;
                     printf("Current Health: %d\n", state->health);
                 }
