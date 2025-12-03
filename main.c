@@ -31,11 +31,13 @@ int main(void) {
                 state.location = GAME_WIN;
                 break;
             case GAME_OVER:
-                printf("\n--- GAME OVER ---\nYour journey ends here.\n");
+                print_image("../images/lose.txt");
+                printf("\nYour journey ends here.\n");
                 running = false;
                 break;
             case GAME_WIN:
-                printf("\n--- VICTORY! ---\nYou have escaped text hell!\n");
+                print_image("../images/win.txt");
+                printf("\nYou have escaped text hell!\n");
                 running = false;
                 break;
         }

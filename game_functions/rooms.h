@@ -23,6 +23,7 @@ typedef struct {
 
 int get_input(int max_choice);
 void print_header(char *title);
+void print_image(char *file);
 void handle_cell(gameState_t *state);
 void handle_hallway(gameState_t *state);
 void handle_armory(gameState_t *state);
