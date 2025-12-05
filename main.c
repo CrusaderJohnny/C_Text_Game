@@ -6,6 +6,8 @@ int main(void) {
         .location = ROOM_CELL,
         .health = 100,
         .has_key = false,
+        .has_exit_key = false,
+        .visited_cells = false,
         .has_sword = false,
         .guard_alive = true
     };
@@ -23,6 +25,18 @@ int main(void) {
                 break;
             case ROOM_HALLWAY:
                 handle_hallway(&state);
+                break;
+            case ROOM_HALLWAY2:
+                handle_hallway2(&state);
+                break;
+            case ROOM_HALLWAY3:
+                handle_hallway3(&state);
+                break;
+            case ROOM_HALLWAY4:
+                handle_hallway4(&state);
+                break;
+            case ROOM_HALLWAY_END:
+                handle_hallway_end(&state);
                 break;
             case ROOM_ARMORY:
                 handle_armory(&state);
